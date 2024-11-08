@@ -1,0 +1,145 @@
+// Footer area start here ***
+.footer {
+	&-area {
+		overflow: hidden;
+		position: relative;
+	}
+	&__wrp {
+		position: relative;
+		@include justify-wrp;
+		gap: 30px;
+		@include breakpoint(max-sm) {
+			flex-direction: column;
+			justify-content: left;
+			align-items: unset;
+		}
+	}
+	&__shape-solid-left {
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	&__shape-regular-left {
+		position: absolute;
+		top: 30px;
+		left: 0;
+		@include breakpoint(max-md) {
+			display: none;
+		}
+	}
+	&__shape-solid-right {
+		position: absolute;
+		top: 0;
+		right: 0;
+		@include breakpoint(max-md) {
+			display: none;
+		}
+	}
+	&__shape-regular-right {
+		position: absolute;
+		top: 30px;
+		right: 0;
+		@include breakpoint(max-md) {
+			display: none;
+		}
+	}
+	&__shadow-shape {
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		transform: translate(-50%);
+		animation: footer__shadow 10s linear infinite alternate;
+	}
+	&__item {
+		.logo {
+			margin-top: -30px;
+			@include breakpoint(max-sm) {
+				margin-top: 0;
+			}
+		}
+		.footer-title {
+			margin-bottom: 30px;
+			color: var(--white);
+		}
+		ul {
+			li {
+				&:not(:last-child) {
+					margin-bottom: 15px;
+				}
+				a {
+					color: var(--white);
+					opacity: 0.8;
+					&:hover {
+						color: var(--primary-color);
+						padding-left: 5px;
+					}
+				}
+			}
+		}
+		.footer-contact {
+			li {
+				@include flex;
+				gap: 15px;
+				color: var(--white);
+				i {
+					font-size: 24px;
+				}
+				h5 {
+					color: var(--white);
+				}
+			}
+		}
+		p {
+			color: var(--white);
+			opacity: 0.8;
+		}
+		&.item-big {
+			max-width: 270px;
+			width: 100%;
+		}
+		&.item-sm {
+			max-width: 170px;
+			width: 100%;
+		}
+		.social-icon {
+			margin-top: 30px;
+			@include flex;
+			gap: 7px;
+			a {
+				@include radius(36px, 36px, 36px);
+				border-radius: 0;
+				border: 1px solid rgba(227, 227, 227, 0.2);
+				color: var(--white);
+				&:hover {
+					background-color: var(--primary-color);
+				}
+				&.active {
+					background-color: var(--primary-color);
+				}
+			}
+		}
+	}
+	&__copyright {
+		position: relative;
+		padding: 20px;
+		border-top: 1px solid rgba(255, 255, 225, 0.2);
+		p {
+			color: var(--white);
+			opacity: 0.8;
+		}
+		a {
+			color: var(--white);
+			opacity: 0.8;
+			&:hover {
+				color: var(--primary-color);
+			}
+		}
+	}
+	&-two {
+		&-area {
+			@extend .footer-area;
+			padding-top: 120px;
+		}
+	}
+}
+// Footer area end here ***

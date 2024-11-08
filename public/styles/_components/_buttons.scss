@@ -1,0 +1,194 @@
+// Button one area start here ***
+.btn-one {
+	padding: 15px 25px;
+	background: var(--gradient-bg);
+	font-weight: 600;
+	color: var(--white);
+	transition: var(--transition);
+	text-transform: capitalize;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+	i {
+		margin-left: 8px;
+		transition: var(--transition);
+		@include breakpoint(max-sm) {
+			margin-left: 3px;
+			font-size: 12px;
+		}
+	}
+	@include breakpoint(max-sm) {
+		padding: 8px 18px;
+		font-size: 14px;
+	}
+	&::after {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 50%;
+		height: 0;
+		content: "";
+		background-color: var(--secondary-color);
+		z-index: -1;
+		transition: var(--transition);
+	}
+	&::before {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 50%;
+		height: 0;
+		content: "";
+		background-color: var(--secondary-color);
+		z-index: -1;
+		transition: var(--transition);
+	}
+	&:hover {
+		color: var(--white);
+		&::before {
+			height: 100%;
+		}
+		&::after {
+			height: 100%;
+		}
+		i {
+			transform: translate(5px);
+		}
+	}
+}
+// Button one area end here ***
+
+// Button read more area start here ***
+.read-more-btn {
+	text-transform: capitalize;
+	font-weight: 600;
+	color: var(--paragraph);
+	i {
+		margin-left: 5px;
+		transition: var(--transition);
+	}
+	&:hover {
+		color: var(--primary-color);
+		i {
+			color: var(--primary-color);
+			margin-left: 10px;
+		}
+	}
+}
+// Button read more area end here ***
+
+// Arry button area start here ***
+.arry-prev {
+	@include radius(50px, 50px, 50px);
+	color: var(--primary-color);
+	transition: var(--transition);
+	border: 1px solid var(--primary-color);
+	font-size: 20px;
+	&:hover {
+		background-color: var(--primary-color);
+		color: var(--white);
+	}
+	&.active {
+		background-color: var(--primary-color);
+		color: var(--white);
+	}
+}
+.arry-next {
+	@extend.arry-prev;
+}
+// Arry button area end here ***
+
+// Dots area start here ***
+.dot {
+	.swiper-pagination-bullet {
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		transition: 0.6s;
+		background-color: transparent;
+		opacity: 1;
+		position: relative;
+		border: 1px solid transparent;
+		&::before {
+			position: absolute;
+			content: "";
+			top: 5px;
+			left: 5px;
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background-color: var(--primary-color);
+			transition: 0.6s;
+		}
+	}
+	.swiper-pagination-bullet.swiper-pagination-bullet-active {
+		&::before {
+			background-color: var(--primary-color);
+		}
+		border: 1px solid var(--primary-color);
+	}
+}
+.dot-light {
+	@extend.dot;
+	.swiper-pagination-bullet {
+		background-color: transparent;
+		border: 1px solid transparent;
+		&::before {
+			background-color: var(--white);
+		}
+	}
+	.swiper-pagination-bullet.swiper-pagination-bullet-active {
+		&::before {
+			background-color: var(--primary-color);
+		}
+		border: 1px solid rgb(255, 255, 255, 0.2);
+	}
+}
+// Dots area end here ***
+
+// Video button area start here ***
+.video-btn {
+	position: relative;
+	text-align: center;
+	display: inline-block;
+	z-index: 2;
+	a {
+		position: relative;
+		color: var(--white);
+		font-size: 20px;
+		z-index: 1;
+		background: var(--gradient-bg);
+		width: 60px;
+		height: 60px;
+		line-height: 60px;
+		border-radius: 50%;
+		display: block;
+	}
+	&.video-pulse {
+		&::after,
+		&::before {
+			position: absolute;
+			content: "";
+			width: 100%;
+			height: 100%;
+			border: 10px solid var(--primary-color);
+			opacity: 0.7;
+			left: 0;
+			top: 0;
+			border-radius: 50%;
+			-webkit-animation-duration: 2.5s;
+			animation-duration: 2.5s;
+			-webkit-animation-timing-function: linear;
+			animation-timing-function: linear;
+			-webkit-animation-name: video-animation;
+			animation-name: video-animation;
+			-webkit-animation-iteration-count: infinite;
+			animation-iteration-count: infinite;
+		}
+		&::before {
+			-webkit-animation-delay: 1s;
+			animation-delay: 1s;
+		}
+	}
+}
+// Video button area end here ***

@@ -1,0 +1,123 @@
+//  Sway animation start here ***
+@keyframes sway {
+	0% {
+		transform: translateX(-20px);
+	}
+	100% {
+		transform: translateX(0px);
+	}
+}
+.sway__animation {
+	animation: sway 3s linear infinite alternate;
+}
+
+@keyframes swayX {
+	0% {
+		transform: translateX(20px);
+	}
+	100% {
+		transform: translateX(0px);
+	}
+}
+.sway__animationX {
+	animation: swayX 3s linear infinite alternate;
+}
+
+@keyframes footer__shadow {
+	0% {
+		margin-left: -200px;
+	}
+	100% {
+		margin-right: -200px;
+	}
+}
+@keyframes sway_Y {
+	0% {
+		transform: translateY(0px);
+	}
+	100% {
+		transform: translateY(20px);
+	}
+}
+.sway_Y__animation {
+	animation: sway_Y 3s linear infinite alternate;
+}
+@keyframes sway_YY {
+	0% {
+		transform: translateY(0px);
+	}
+	100% {
+		transform: translateY(-20px);
+	}
+}
+.sway_Y__animationY {
+	animation: sway_YY 3s linear infinite alternate;
+}
+//  Sway animation end here ***
+
+// Animation rotate area start here ***
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.animation__rotate {
+	animation: rotate 40s linear infinite;
+}
+@keyframes rotateY {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(-360deg);
+	}
+}
+.animation__rotateY {
+	animation: rotateY 40s linear infinite;
+}
+// Animation rotate area end here ***
+
+//  Bobble animation start here ***
+@keyframes bobble {
+	0% {
+		transform: translateY(0) scale(1);
+	}
+	100% {
+		transform: translateY(-20px) scale(1.1);
+	}
+}
+.bobble__animation {
+	animation: bobble 3s ease-in-out infinite alternate;
+}
+//  Bobble animation end here ***
+
+//  Animation of the video button area start here ***
+@-webkit-keyframes video-animation {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.5);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(2);
+	}
+}
+
+@keyframes video-animation {
+	0% {
+		transform: scale(1);
+	}
+	50% {
+		transform: scale(1.5);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(2);
+	}
+}
+//  Animation of the video button end here ***

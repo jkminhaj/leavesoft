@@ -1,0 +1,63 @@
+/*-----------------------------------------------------------------
+
+Template Name: Leavesoft | Software Development & IT Solutions React NextJs Template
+Description: Software Development & IT Solutions React NextJs Template
+Author:  Gramentheme
+Author URI: https://themeforest.net/user/gramentheme
+Version: 1.0.0
+
+-------------------------------------------------------------------
+CSS TABLE OF CONTENTS
+-------------------------------------------------------------------
+
+01. abstracts
+    1.01 --> mixins
+    1.02 --> variable
+
+02. base
+    2.01 --> typography
+    2.02 --> animation
+    2.03 --> responsive
+
+03. components
+    3.01 --> buttons
+    3.02 --> progress
+
+04. layout
+    4.01 --> header
+    4.02 --> banner
+    4.03 --> section
+    4.04 --> footer
+
+------------------------------------------------------------------*/
+
+// bootstrap
+@import "~bootstrap/scss/bootstrap";
+
+// font awesome 6
+@import "@/public/icons/css/all.min.css";
+
+// modal video
+@import "~react-modal-video/scss/modal-video.scss";
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+// Abstracts styles ***
+@import "_abstracts/_mixins";
+@import "_abstracts/_variables";
+
+// Typography styles***
+@import "_base/_typography";
+
+// Component styles ***
+@import "_components/_buttons";
+@import "_components/_progress";
+
+// Layout styles ***
+@import "_layout/_header";
+@import "_layout/_banner";
+@import "_layout/_section";
+@import "_layout/_footer";
+
+// Animation styles***
+@import "_base/_animation";

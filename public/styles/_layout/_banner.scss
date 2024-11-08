@@ -1,0 +1,403 @@
+// Banner area start here ***
+.banner {
+  &-area {
+    overflow: hidden;
+    position: relative;
+  }
+  &__dot-wrp {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 2;
+  }
+  &__shape-left1 {
+    position: absolute;
+    top: 30px;
+    left: 0;
+  }
+  &__shape-left2 {
+    position: absolute;
+    top: 60px;
+    left: 0;
+  }
+  &__shape-left3 {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+  }
+  &__shape-right1 {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    @include breakpoint(max-md) {
+      display: none;
+    }
+  }
+  &__shape-right2 {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    @include breakpoint(max-md) {
+      display: none;
+    }
+  }
+  &__line {
+    position: absolute;
+    bottom: 25%;
+    left: 33%;
+    z-index: 2;
+  }
+  &__right-line1 {
+    position: absolute;
+    top: -65px;
+    right: 0;
+  }
+  &__right-line2 {
+    @extend .banner__right-line1;
+  }
+  &__right-line3 {
+    @extend .banner__right-line1;
+  }
+  &__right-line4 {
+    @extend .banner__right-line1;
+  }
+  &__content {
+    max-width: 770px;
+    padding: 218px 0;
+    position: relative;
+    @include breakpoint(max-lg) {
+      padding: 100px 0;
+    }
+    h4 {
+      text-transform: uppercase;
+      font-size: 18px;
+      line-height: 32px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      svg {
+        margin-top: -4px;
+      }
+    }
+    h1 {
+      font-size: 80px;
+      line-height: 90px;
+      font-weight: 700;
+      @include breakpoint(max-lg) {
+        font-size: 60px;
+        line-height: 70px;
+      }
+      @include breakpoint(max-md) {
+        font-size: 50px;
+        line-height: 60px;
+      }
+      @include breakpoint(max-sm) {
+        font-size: 35px;
+        line-height: 50px;
+      }
+    }
+    p {
+      color: var(--white);
+      opacity: 90%;
+    }
+  }
+  &__slider {
+
+    .slide-bg {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      z-index: -2;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      transform: scale(1);
+      -webkit-transition: all 9s ease-out 0s;
+      -moz-transition: all 9s ease-out 0s;
+      -ms-transition: all 9s ease-out 0s;
+      -o-transition: all 9s ease-out 0s;
+      transition: all 9s ease-out 0s;
+    }
+
+
+    .swiper-slide-active .slide-bg {
+      -webkit-transform: scale(1.3);
+      -moz-transform: scale(1.3);
+      transform: scale(1.3);
+    }
+  }
+  &-two {
+    &-area {
+      @extend .banner-area;
+    }
+    &__shape1 {
+      position: absolute;
+      right: 0;
+      top: 100px;
+      @include breakpoint(max-sm) {
+        display: none;
+      }
+    }
+    &__shape2 {
+      position: absolute;
+      right: 0;
+      top: 130px;
+      @include breakpoint(max-sm) {
+        display: none;
+      }
+    }
+    &__line-left {
+      position: absolute;
+      left: 0;
+      top: 100px;
+    }
+    &__circle-solid {
+      position: absolute;
+      bottom: -80px;
+      left: -100px;
+    }
+    &__circle-regular {
+      position: absolute;
+      bottom: -80px;
+      left: -100px;
+    }
+    &__right-shape {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    &__line {
+      position: absolute;
+      left: 17%;
+      top: 25%;
+      z-index: 2;
+      @include breakpoint(max-sm) {
+        display: none;
+      }
+    }
+    &__dot-wrp {
+      bottom: 120px;
+    }
+    &__content {
+      @extend .banner__content;
+      max-width: 950px;
+      margin: 0 auto;
+      padding: 250px 0;
+      @include breakpoint(max-lg) {
+        padding: 150px 0;
+      }
+      h1 {
+        font-size: 90px;
+        line-height: 100px;
+        @include breakpoint(max-lg) {
+          font-size: 60px;
+          line-height: 70px;
+        }
+        @include breakpoint(max-sm) {
+          font-size: 30px;
+          line-height: 40px;
+        }
+      }
+      h4 {
+        background-color: rgba(255, 255, 255, 0.1);
+        display: inline-block;
+        padding: 0px 15px;
+        @include breakpoint(max-sm) {
+          padding: 0px 10px;
+          font-size: 14px;
+          margin-bottom: 5px;
+        }
+      }
+      p {
+        @include breakpoint(max-sm) {
+          font-size: 14px;
+          margin-top: 10px;
+        }
+      }
+      .btn-one {
+        @include breakpoint(max-sm) {
+          margin-top: 30px;
+        }
+      }
+    }
+  }
+  &-three {
+    &-area {
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+      background: linear-gradient(90deg, #0f0d1d -76.72%, #3c72fc 191.51%);
+      padding-top: 250px;
+      padding-bottom: 200px;
+      @include breakpoint(max-md) {
+        padding: 80px 0;
+      }
+    }
+    &__bg {
+      position: absolute;
+      left: 20px;
+      bottom: 80px;
+      z-index: -1;
+    }
+    &__shape-left {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+    &__shape-right {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      height: 90%;
+      img {
+        height: 100%;
+      }
+    }
+    &__content {
+      @extend .banner-two__content;
+      max-width: 100%;
+      @include breakpoint(max-lg) {
+        margin-top: 100px;
+      }
+      @include breakpoint(max-sm) {
+        margin-top: 50px;
+      }
+      @include breakpoint(max-sm) {
+        h4 {
+          font-size: 12px;
+        }
+      }
+    }
+    &__container {
+      max-width: 1350px;
+      padding: 30px;
+      margin: 0 auto;
+    }
+    &__video-btn {
+      a {
+        @include radius(44px, 44px, 44px);
+        background: var(--white);
+        color: var(--primary-color);
+        font-size: 16px;
+      }
+    }
+    &__info {
+      @include flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+  }
+  &__inner-page {
+    overflow: hidden;
+    .shape1 {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+    .shape2 {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+    .shape3 {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+    @extend .overlay;
+    z-index: 1;
+    &::before {
+      background: linear-gradient(270.07deg, #002b98 0.07%, #00060c 99.95%);
+      z-index: -1;
+      opacity: 0.75;
+    }
+    text-transform: capitalize;
+    @include breakpoint(max-md) {
+      padding: 80px 0;
+    }
+    h2 {
+      margin-bottom: 10px;
+      color: var(--white);
+    }
+    span {
+      color: var(--white);
+      font-weight: 500;
+      i {
+        color: var(--white);
+      }
+    }
+    a {
+      color: var(--white);
+      font-weight: 500;
+      &:hover {
+        color: var(--primary-color);
+      }
+    }
+  }
+}
+
+.banner-area {
+  .banner__content {
+    h4 {
+	  animation-delay: 0.3s;
+	  opacity: 0;
+	  visibility: hidden;
+    }
+
+    h1 {
+		animation-delay: 0.5s;
+		opacity: 0;
+		visibility: hidden;
+    }
+
+    p {
+		animation-delay: 0.7s;
+		opacity: 0;
+		visibility: hidden;
+    }
+
+    .btn-one {
+		animation-delay: 0.9s;
+		opacity: 0;
+		visibility: hidden;
+    }
+  }
+
+  .swiper-slide-active {
+    .banner__content {
+      h4,
+      h1,
+      p,
+      .btn-one {
+
+		animation-name: slideInRight;
+		animation-duration: 2s;
+		animation-fill-mode: both;
+      }
+    }
+  }
+
+  @keyframes slideInRight {
+	0% {
+	-webkit-transform: translateX(100%);
+	transform: translateX(100%);
+	visibility: hidden;
+	opacity: 0;
+	}
+	100% {
+	-webkit-transform: translateX(0);
+	transform: translateX(0);
+	visibility: visible;
+	opacity: 1;
+	}
+	} 
+}
+// Banner area end here ***
